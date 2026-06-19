@@ -29,6 +29,8 @@ body {
     justify-content: center;
     align-items: center;
     flex: 1;
+    text-align: center;
+    padding: 24px;
 }
 
 .img.placeholder {
@@ -37,6 +39,7 @@ body {
     border: 3px solid grey;
     text-align: center;
     padding: 18px;
+    flex-shrink: 1;
 }
 
 h1 {
