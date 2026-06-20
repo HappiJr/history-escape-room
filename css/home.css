@@ -4,8 +4,9 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    height: 100vh;
-    font-size: 18px;
+    height: 100dvh;
+    font-size: 24px;
+    font-weight: 800;
 }
 
 .header, .footer {
