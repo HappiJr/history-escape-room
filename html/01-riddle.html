@@ -28,9 +28,24 @@
             </div>
             
             <div class="side right">
-                <h2>R&auml;tsel 1</h2>
-                <p class="placeholder">Hier ist ein ggf. bisschen Erkl&auml;rung!</p>
-                <input class="placeholder">
+                <h2>R&auml;tsel 1:</h2>
+                <div class="riddle-specifics">
+                    <h1>~ Die Lehrerin ~</h1>
+                    <div class="code-input-container">
+                        <input type="text" class="code-input" maxlength="1" oninput="moveToNext(this)">
+                        <input type="text" class="code-input" maxlength="1" oninput="moveToNext(this)">
+                        <input type="text" class="code-input" maxlength="1" oninput="moveToNext(this)">
+                        <input type="text" class="code-input" maxlength="1" oninput="moveToNext(this)">
+                        <input type="text" class="code-input" maxlength="1" oninput="moveToNext(this)">
+                        <input type="text" class="code-input" maxlength="1" oninput="moveToNext(this)">
+                        <input type="text" class="code-input" maxlength="1" oninput="moveToNext(this)">
+                        <input type="text" class="code-input" maxlength="1" oninput="moveToNext(this)">
+                        <!-- the type has to be "text" in order for maxlength to only allow the input of one digit -->
+                    </div>
+                    <div class="button-container">
+                        <button class="submit">Fertig!</button>
+                    </div>
+                </div>
             </div>
         </div>
 
