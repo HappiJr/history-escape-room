@@ -14,13 +14,13 @@ body {
     display: flex;
     align-items: center;
     padding: 18px;
-    color: rgb(82, 82, 82);
     text-align: center;
 }
 
 .header {
     height: 48px;
-    background-color: rgb(211, 211, 211);
+    background-color: rgb(61, 61, 61);
+    color: rgb(224, 224, 224);
     justify-content: space-between;
     /* color: rgb(194, 24, 24); */
 }
@@ -65,7 +65,7 @@ a {
 
 .footer {
     min-height: 90px;
-    background-color: rgb(153, 153, 153);
+    background-color: rgb(179, 6, 6);
     justify-content: flex-end;
     align-items: stretch;
     gap: 20px;
@@ -75,8 +75,8 @@ a {
 
 .solution {
     flex: 1;
-    background-color: rgb(128, 128, 128);
-    border: 3px solid rgb(88, 88, 88);
+    background-color: rgb(201, 13, 13);
+    border: 3px solid rgb(128, 2, 2);
     color: white;
     font-size: 30px;
     border-radius: 10px;

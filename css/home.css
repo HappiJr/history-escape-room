@@ -15,12 +15,12 @@ body {
     display: flex;
     align-items: center;
     padding: 18px;
-    color: rgb(82, 82, 82);
     text-align: center;
 }
 
 .header {
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(61, 61, 61);
+    color: rgb(224, 224, 224);
     justify-content: space-between;
     /* color: rgb(194, 24, 24); */
 }
@@ -67,6 +67,7 @@ a {
 }
 
 .footer {
-    background-color: rgb(209, 209, 209);
+    background-color: rgb(179, 6, 6);
+    color: white;
     justify-content: flex-end;
 }
