@@ -29,8 +29,24 @@
             
             <div class="side right">
                 <h2>R&auml;tsel 7</h2>
-                <p class="placeholder">Hier ist ein ggf. bisschen Erkl&auml;rung!</p>
-                <input class="placeholder">
+                <div class="riddle-specifics">
+                    <h1>~ Die Unterschiede der R&auml;ume ~</h1>
+                    <div class="code-input-container">
+                        <input type="text" class="code-input one" maxlength="1" oninput="moveToNext(this)" onkeydown="moveToPrev(this, event)">
+                        <input type="text" class="code-input two" maxlength="1" oninput="moveToNext(this)" onkeydown="moveToPrev(this, event)">
+                        <input type="text" class="code-input three" maxlength="1" oninput="moveToNext(this)" onkeydown="moveToPrev(this, event)">
+                        <input type="text" class="code-input four" maxlength="1" oninput="moveToNext(this)" onkeydown="moveToPrev(this, event)">
+                        <input type="text" class="code-input five" maxlength="1" oninput="moveToNext(this)" onkeydown="moveToPrev(this, event)">
+                        <input type="text" class="code-input six" maxlength="1" oninput="moveToNext(this)" onkeydown="moveToPrev(this, event)">
+                        <input type="text" class="code-input seven" maxlength="1" oninput="moveToNext(this)" onkeydown="moveToPrev(this, event)">
+                        <input type="text" class="code-input eight" maxlength="1" oninput="moveToNext(this)" onkeydown="moveToPrev(this, event)">
+                        <!-- the type has to be "text" in order for maxlength to only allow the input of one digit -->
+                    </div>
+                    <div class="button-container">
+                        <button class="submit" onclick="checkCode()">Fertig!</button>
+                    </div>
+                    <div class="error-message">Hier k&ouml;nnte ein Fehler vorliegen!</div>
+                </div>
             </div>
         </div>
 
