@@ -88,19 +88,14 @@ h1 {
     display: flex;
     gap: 10px;
     justify-content: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     margin: 6px 0;
 }
 
 .code-input {
-    /* here are some additions that might prevent Safari
-    ignoring my max-width property */
     width: 100%;
-    min-width: 0;
-    -webkit-appearance: none;
-    appearance: none;
-    /* end of additions */
     max-width: 60px;
+    min-width: 30px;
     height: 80px;
     border: 4px solid rgb(146, 146, 146);
     background-color: rgb(199, 199, 199);
