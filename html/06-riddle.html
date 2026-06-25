@@ -68,6 +68,7 @@
         <script>
             let solutionArray = retrieveArray();
             showObtainedSolutionLetters(solutionArray);
+            lockInputsIfSolved();
 
             function checkCode() {
                 if (checkForEmptyInputs()) { //if all Inputs have values:
@@ -98,7 +99,30 @@
                 solutionArray[5] = 'true';
                 storeArray(solutionArray);
                 showObtainedSolutionLetters(solutionArray);
+                lockInputsIfSolved();
             } //revealSolution()
+
+            function lockInputsIfSolved() {
+                if (solutionArray[5] == 'true') {
+                    document.querySelector('.code-input.one').value = 8;
+                    document.querySelector('.code-input.two').value =  6;
+                    document.querySelector('.code-input.three').value = 2; 
+                    document.querySelector('.code-input.four').value = 5; 
+                    document.querySelector('.code-input.five').value = 3; 
+                    document.querySelector('.code-input.six').value = 1; 
+                    document.querySelector('.code-input.seven').value = 7; 
+                    document.querySelector('.code-input.eight').value = 9;
+
+                    document.querySelector('.code-input.one').disabled = true;
+                    document.querySelector('.code-input.two').disabled = true;
+                    document.querySelector('.code-input.three').disabled = true;
+                    document.querySelector('.code-input.four').disabled = true;
+                    document.querySelector('.code-input.five').disabled = true;
+                    document.querySelector('.code-input.six').disabled = true;
+                    document.querySelector('.code-input.seven').disabled = true;
+                    document.querySelector('.code-input.eight').disabled = true;
+                }
+            } //lockInputsIfSolved()
         </script>
     </body>
 </html>

@@ -60,6 +60,7 @@
         <script>
             let solutionArray = retrieveArray();
             showObtainedSolutionLetters(solutionArray);
+            lockInputsIfSolved();
 
             function checkWord() {
                 if (document.querySelector('.word-input').value) { //if all Inputs have values:
@@ -83,7 +84,16 @@
                 solutionArray[7] = 'true';
                 storeArray(solutionArray);
                 showObtainedSolutionLetters(solutionArray);
+                lockInputsIfSolved();
             } //revealSolution()
+
+            function lockInputsIfSolved() {
+                if (solutionArray[7] == 'true') {
+                    document.querySelector('.word-input').value = 'aktiont4';
+
+                    document.querySelector('.word-input').disabled = true;
+                }
+            } //lockInputsIfSolved()
         </script>
     </body>
 </html>

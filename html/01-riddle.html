@@ -68,6 +68,7 @@
         <script>
             let solutionArray = retrieveArray();
             showObtainedSolutionLetters(solutionArray);
+            lockInputsIfSolved();
 
             function checkCode() {
                 if (checkForEmptyInputs()) { //if all Inputs have values:
@@ -98,7 +99,35 @@
                 solutionArray[0] = 'true';
                 storeArray(solutionArray);
                 showObtainedSolutionLetters(solutionArray);
+                lockInputsIfSolved();
             } //revealSolution()
+
+            function lockInputsIfSolved() {
+                if (solutionArray[0] == 'true') {
+                    document.querySelector('.code-input.one').value = 0;
+                    document.querySelector('.code-input.two').value =  3;
+                    document.querySelector('.code-input.three').value = 1; 
+                    document.querySelector('.code-input.four').value = 1; 
+                    document.querySelector('.code-input.five').value = 6; 
+                    document.querySelector('.code-input.six').value = 1; 
+                    document.querySelector('.code-input.seven').value = 2; 
+                    document.querySelector('.code-input.eight').value = 5;
+
+                    document.querySelector('.code-input.one').disabled = true;
+                    document.querySelector('.code-input.two').disabled = true;
+                    document.querySelector('.code-input.three').disabled = true;
+                    document.querySelector('.code-input.four').disabled = true;
+                    document.querySelector('.code-input.five').disabled = true;
+                    document.querySelector('.code-input.six').disabled = true;
+                    document.querySelector('.code-input.seven').disabled = true;
+                    document.querySelector('.code-input.eight').disabled = true;
+                    /* I am aware that I could use const variables instead of using
+                    the querySelector everytime which would probably reduce processing time. 
+                    However, I would need to do that for every html.file and I don't have
+                    endless time right now. So I'll just leave it this way because it's
+                    quicker to implement. */
+                }
+            } //lockInputsIfSolved()
         </script>
     </body>
 </html>

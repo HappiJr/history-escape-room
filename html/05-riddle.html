@@ -63,6 +63,7 @@
         <script>
             let solutionArray = retrieveArray();
             showObtainedSolutionLetters(solutionArray);
+            lockInputsIfSolved();
 
             function checkCode() {
                 if (checkForEmptyInputs()) { //if all Inputs have values:
@@ -88,7 +89,20 @@
                 solutionArray[4] = 'true';
                 storeArray(solutionArray);
                 showObtainedSolutionLetters(solutionArray);
+                lockInputsIfSolved();
             } //revealSolution()
+
+            function lockInputsIfSolved() {
+                if (solutionArray[4] == 'true') {
+                    document.querySelector('.code-input.one').value = 1;
+                    document.querySelector('.code-input.two').value =  6;
+                    document.querySelector('.code-input.three').value = 1; 
+
+                    document.querySelector('.code-input.one').disabled = true;
+                    document.querySelector('.code-input.two').disabled = true;
+                    document.querySelector('.code-input.three').disabled = true;
+                }
+            } //lockInputsIfSolved()
         </script>
     </body>
 </html>
