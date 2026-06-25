@@ -94,6 +94,7 @@
             } //checkCode()
 
             function revealSolution() {
+                document.querySelector('.error-message').style.color = 'white';
                 solutionArray[0] = 'true';
                 storeArray(solutionArray);
                 showObtainedSolutionLetters(solutionArray);

@@ -57,5 +57,33 @@
         </div>
 
         <script type="text/javascript" src="../js/script.js"></script>
+        <script>
+            let solutionArray = retrieveArray();
+            showObtainedSolutionLetters(solutionArray);
+
+            function checkWord() {
+                if (document.querySelector('.word-input').value) { //if all Inputs have values:
+                    if (
+                        //check if the entered values are correct:
+                        document.querySelector('.word-input').value == 'Menschenrechte' 
+                    ){ //if entered values are correct
+                        revealSolution();
+                    } else { //if entered calues are not correct
+                        document.querySelector('.error-message').innerHTML = 'Inkorrekt. Versuch es noch einmal!';
+                        document.querySelector('.error-message').style.color = 'rgb(224, 111, 111)';
+                    }
+                } else { //if there is at least one empty input
+                    document.querySelector('.error-message').innerHTML = 'Es gibt noch leere Eingabe-Felder!';
+                    document.querySelector('.error-message').style.color = 'rgb(224, 111, 111)';
+                }
+            } //checkWord()
+
+            function revealSolution() {
+                document.querySelector('.error-message').style.color = 'white';
+                solutionArray[2] = 'true';
+                storeArray(solutionArray);
+                showObtainedSolutionLetters(solutionArray);
+            } //revealSolution()
+        </script>
     </body>
 </html>
