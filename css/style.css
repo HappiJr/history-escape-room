@@ -74,7 +74,7 @@ h2 {
     flex-direction: column;
     gap: 10px;
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     justify-content: center;
 }
 
@@ -119,6 +119,12 @@ h1 {
     font-weight: 600;
     border-radius: 20px;
     margin-top: 12px; 
+}
+
+.error-message {
+    color: white;
+    text-align: center;
+    margin: 10px;
 }
 
 .footer {
