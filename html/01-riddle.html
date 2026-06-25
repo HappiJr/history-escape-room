@@ -64,9 +64,10 @@
             <div class="solution eleven"></div>
         </div>
 
+        <script type="text/javascript" src="../js/script.js"></script>
         <script>
-            // let solutionArray = sessionStorage.getItem('solutionArray');
-            // showObtainedSolutionLetters(solutionArray, document.querySelector('.footer'));
+            let solutionArray = retrieveArray();
+            showObtainedSolutionLetters(solutionArray);
 
             function checkCode() {
                 if (checkForEmptyInputs()) { //if all Inputs have values:
@@ -92,25 +93,13 @@
                 }
             } //checkCode()
 
-            function checkForEmptyInputs() {
-                let noEmptyInputs = true;
-                document.querySelectorAll('.code-input').forEach(input => {
-                    let val = input.value;
-                    if (val == "") {
-                        noEmptyInputs = false;
-                    }
-                })
-                return noEmptyInputs;
-            } //checkForEmptyInputs()
-
             function revealSolution() {
                 document.querySelector('.solution.two').innerHTML = 'i';
                 document.querySelector('.solution.eight').innerHTML = 'i';
                 document.querySelector('.error-message').style.color = 'white';
-                // solutionArray[1] = true;
-                // sessionStorage.setItem('solutionArray', solutionArray);
+                solutionArray[0] = 'true';
+                storeArray(solutionArray);
             } //revealSolution()
         </script>
-        <script type="text/javascript" src="../js/script.js"></script>
     </body>
 </html>

@@ -24,5 +24,20 @@
             <div class="placeholder">I habe keine Ahnung, was ich hier reinschreiben soll.</div>
         </div>
 
+        <script>
+            let solutionArray = ['false', 'false', 'false', 'false', 'false', 'false', 'false', 'false'];
+            //the solutionArray shows which riddles have been solved yet
+            //'false' means not solved; 'true' means solved   
+            //(when getting transfered, the turn into string. If I use strings from the beginning they dont need to change.)
+            //first entry is for the first riddel, second one is for the second riddle and so on...
+            
+            storeArray();
+
+            function storeArray() {
+                for(let i = 0; i < 8; i++) {
+                    sessionStorage.setItem(i, solutionArray[i]);
+                }
+            } //storeArray()
+        </script>
     </body>
 </html>
