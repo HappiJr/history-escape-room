@@ -38,8 +38,6 @@
                         <input type="text" class="code-input four" maxlength="1" oninput="moveToNext(this)" onkeydown="moveToPrev(this, event)">
                         <input type="text" class="code-input five" maxlength="1" oninput="moveToNext(this)" onkeydown="moveToPrev(this, event)">
                         <input type="text" class="code-input six" maxlength="1" oninput="moveToNext(this)" onkeydown="moveToPrev(this, event)">
-                        <input type="text" class="code-input seven" maxlength="1" oninput="moveToNext(this)" onkeydown="moveToPrev(this, event)">
-                        <input type="text" class="code-input eight" maxlength="1" oninput="moveToNext(this)" onkeydown="moveToPrev(this, event)">
                         <!-- the type has to be "text" in order for maxlength to only allow the input of one digit -->
                     </div>
                     <div class="button-container">
@@ -74,14 +72,12 @@
                 if (checkForEmptyInputs()) { //if all Inputs have values:
                     if (
                         //check if the entered values are correct:
-                        document.querySelector('.code-input.one').value == '?' &&
-                        document.querySelector('.code-input.two').value == '?' &&
-                        document.querySelector('.code-input.three').value == '?' &&
-                        document.querySelector('.code-input.four').value == '?' &&
-                        document.querySelector('.code-input.five').value == '?' &&
-                        document.querySelector('.code-input.six').value == '?' &&
-                        document.querySelector('.code-input.seven').value == '?' &&
-                        document.querySelector('.code-input.eight').value == '?'
+                        document.querySelector('.code-input.one').value == 2 &&
+                        document.querySelector('.code-input.two').value == 7 &&
+                        document.querySelector('.code-input.three').value == 0 &&
+                        document.querySelector('.code-input.four').value == 1 &&
+                        document.querySelector('.code-input.five').value == 4 &&
+                        document.querySelector('.code-input.six').value == 5 
                     ){ //if entered values are correct
                         revealSolution();
                     } else { //if entered calues are not correct
@@ -104,14 +100,12 @@
 
             function lockInputsIfSolved() {
                 if (solutionArray[6] == 'true') {
-                    document.querySelector('.code-input.one').value = '?';
-                    document.querySelector('.code-input.two').value =  '?';
-                    document.querySelector('.code-input.three').value = '?'; 
-                    document.querySelector('.code-input.four').value = '?'; 
-                    document.querySelector('.code-input.five').value = '?'; 
-                    document.querySelector('.code-input.six').value = '?'; 
-                    document.querySelector('.code-input.seven').value = '?'; 
-                    document.querySelector('.code-input.eight').value = '?';
+                    document.querySelector('.code-input.one').value = 2;
+                    document.querySelector('.code-input.two').value = 7;
+                    document.querySelector('.code-input.three').value = 0; 
+                    document.querySelector('.code-input.four').value = 1; 
+                    document.querySelector('.code-input.five').value = 4; 
+                    document.querySelector('.code-input.six').value = 5; 
 
                     document.querySelector('.code-input.one').disabled = true;
                     document.querySelector('.code-input.two').disabled = true;
@@ -119,8 +113,6 @@
                     document.querySelector('.code-input.four').disabled = true;
                     document.querySelector('.code-input.five').disabled = true;
                     document.querySelector('.code-input.six').disabled = true;
-                    document.querySelector('.code-input.seven').disabled = true;
-                    document.querySelector('.code-input.eight').disabled = true;
                 }
             } //lockInputsIfSolved()
         </script>

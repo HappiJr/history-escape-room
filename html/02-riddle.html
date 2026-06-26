@@ -73,13 +73,13 @@
                 if (checkForEmptyInputs()) { //if all Inputs have values:
                     if (
                         //check if the entered values are correct:
-                        document.querySelector('.code-input.one').value == '?' &&
-                        document.querySelector('.code-input.two').value == '?' &&
-                        document.querySelector('.code-input.three').value == '?' &&
-                        document.querySelector('.code-input.four').value == '?' &&
-                        document.querySelector('.code-input.five').value == '?' &&
-                        document.querySelector('.code-input.six').value == '?' &&
-                        document.querySelector('.code-input.seven').value == '?'
+                        document.querySelector('.code-input.one').value == 1 &&
+                        document.querySelector('.code-input.two').value == 9 &&
+                        document.querySelector('.code-input.three').value == 3 &&
+                        document.querySelector('.code-input.four').value == 3 &&
+                        document.querySelector('.code-input.five').value == 1 &&
+                        document.querySelector('.code-input.six').value == 9 &&
+                        document.querySelector('.code-input.seven').value == 4
                     ){ //if entered values are correct
                         revealSolution();
                     } else { //if entered calues are not correct
@@ -102,13 +102,13 @@
 
             function lockInputsIfSolved() {
                 if (solutionArray[1] == 'true') {
-                    document.querySelector('.code-input.one').value = '?';
-                    document.querySelector('.code-input.two').value =  '?';
-                    document.querySelector('.code-input.three').value = '?'; 
-                    document.querySelector('.code-input.four').value = '?'; 
-                    document.querySelector('.code-input.five').value = '?'; 
-                    document.querySelector('.code-input.six').value = '?'; 
-                    document.querySelector('.code-input.seven').value = '?'; 
+                    document.querySelector('.code-input.one').value = 1;
+                    document.querySelector('.code-input.two').value =  9;
+                    document.querySelector('.code-input.three').value = 3; 
+                    document.querySelector('.code-input.four').value = 3; 
+                    document.querySelector('.code-input.five').value = 1; 
+                    document.querySelector('.code-input.six').value = 9; 
+                    document.querySelector('.code-input.seven').value = 4; 
 
                     document.querySelector('.code-input.one').disabled = true;
                     document.querySelector('.code-input.two').disabled = true;
