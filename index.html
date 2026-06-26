@@ -13,15 +13,34 @@
         </div>
 
         <div class="content">
-            <div class="placeholder img" style="width: 500px; height: 180px;">Hier ist Platz f&uuml;r ein Foto oder Symbol!</div>
+            <div class="img">
+                <button class="img alert-trigger" onclick="showAlert()">Hier ein paar Infos zum Bild</button> 
+                <img src="./resources/reichsadler-picture.webp" alt="Bild eines Reichsadlers">
+
+                <!-- <p class="img info">Das hier ist ein Bild eines Reichsadlers. 
+                    Die Verwendung dieses Symbols ist ohne Hakenkreuz nicht strafbar,
+                    daher wird er oft von Nazis benutzt, um Gleichgesinnten die eigene 
+                    Weltanschauung zu demonstrieren.</p>
+                <p class="img link"><a href="https://www.ebay.de/itm/305995497662?srsltid=AfmBOorsjXa86XxQG4_QE_YcTgO_wRYqYVOR5uSBegvjUWXw7wia4qXM"
+                    target="_blank" rel="noreferrer">
+                    Link zur Webseite, von der dieses Bild stammt
+                </a></p> -->
+            </div>
+
             <h1>Escape Room</h1>
             <h2>zum dritten Reich</h2>
-            <p class="placeholder">Hier steht vielleicht eine kleine Erkl&auml;rung bzw. Einf&uuml;hrung oder etwas &auml;nliches!</p>
+
+            <p>Ihr seit gefangen in einer Zeit, wo Menschen systematisch gejagt
+                und get&ouml;tet werden. Wenn ihr eine Chance auf eine heile R&uuml;ckreise haben wollt,
+                m&uuml;sst ihr euch anpassen! L&ouml;st die R&auml;tsel, erhaltet das L&ouml;sungswort
+                und lernt die Ideologie der nationalsozialistischen Zeitgenossen, sonst bleibt euch 
+                jegliche Hoffnung auf eine sichere Zukunft verwehrt.
+            </p>
             <div><a href="./html/01-riddle.html">Klicke hier, um zu starten!</a></div>
         </div>
 
         <div class="footer">
-            <div class="placeholder">I habe keine Ahnung, was ich hier reinschreiben soll.</div>
+            <div>Viel Spa&szlig;! Und viel Gl&uuml;ck beim Entkommen!</div>
         </div>
 
         <script>
@@ -38,6 +57,19 @@
                     sessionStorage.setItem(i, solutionArray[i]);
                 }
             } //storeArray()
+
+            function showAlert() {
+                window.alert(
+                    `Das hier ist ein Reichsadler. 
+Zu NS-Zeiten symbolisierte er Macht, Souveränität, sowie die Idee 
+eines übergeordneten Reiches. In Verbindung mit dem Hakenkreuz
+im Eichenkranz (hier nicht abgebildet) stand er fuer die Ideologie
+des "Dritten Reiches".
+Die Verwendung dieses Symbols mit dem Hakenkreuz ist strafbar, 
+daher wird er von Nazis oft ohne Hakenkreuz verwendet, um 
+Gleichgesinnten zu zeigen, dass man der NS-Ideologie folgt.`
+                )
+            } //showAlert()
         </script>
     </body>
 </html>
